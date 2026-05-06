@@ -10,6 +10,9 @@ services:
     environment:
       # If running Ollama natively on Mac, host.docker.internal resolves to the Mac host.
       - OLLAMA_HOST=http://host.docker.internal:11434
+    volumes:
+      # Mount GCP Application Default Credentials from Mac host to container
+      - ~/.config/gcloud:/root/.config/gcloud:ro
 
   cloudflare-tunnel:
     image: cloudflare/cloudflared:latest
