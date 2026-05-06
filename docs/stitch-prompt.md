@@ -1,0 +1,11 @@
+we want to build a Blog/Content generation engine for non-profit wildlife sanctuaries that generates updates based on their eBird and iNaturalist hotspot data streams e.g. https://ebird.org/hotspot/L619821. we have two initial design concepts for this content engine:
+
+1. The Field Journal (Editorial & Organic)
+This direction focuses on storytelling. It uses a refined, serif-heavy layout reminiscent of a premium nature magazine or a classic naturalist's field notes. The UI would feature warm earth tones, delicate linework, and generous whitespace. Data from eBird and iNaturalist isn't just displayed in tables; it's woven into "Daily Observations" narratives with soft-edged photos and sketch-like data visualizations.
+
+2. The Conservation Lab (Technical & Precise)
+This approach prioritizes transparency and scientific rigor, suitable for sanctuaries focused on research and donor education. It uses a clean, grid-based "dashboard" aesthetic with crisp sans-serif typography. The palette is professional and cool-toned (slate blues, sage, off-white). Data streams are presented as clean, functional charts and maps, with a sidebar for AI-generated interpretations of what the current data means for local conservation efforts.
+
+the first option  should feel like the modern embodiment of a decades (centuries?) -old newspaper column highlighting the seasonal arrivals and departures of the migratory bird visitors, and can also to some extent report on the activity/return-to-activity of specific birders as well. ideally the same underlying content generation engine could also power the 3rd option scientific dashboard that would be a substantially different interface on the same underlying data integration, and that should be evocative of a scientific notebook / lab manual that we will eventually link to public Google Colab notebooks that perform deeper analysis on the same data.
+
+we will start with building the content generation engine, and the first skin/theme will be field journal.
