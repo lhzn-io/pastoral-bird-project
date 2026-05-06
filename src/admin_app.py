@@ -94,7 +94,7 @@ def delete_step(index):
     st.session_state.steps.pop(index)
 
 # Load Prompts for Synthesis
-with open("prompts.json", "r") as f:
+with open(os.path.join(os.path.dirname(__file__), "prompts.json"), "r") as f:
     prompts = json.load(f)
 theme_options = list(prompts.keys())
 

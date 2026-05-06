@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  ebird-admin:
+  bird-admin:
     build: .
-    container_name: ebird-admin
+    container_name: bird-admin
     restart: unless-stopped
     ports:
       - "8501:8501"
@@ -15,11 +15,9 @@ services:
     image: cloudflare/cloudflared:latest
     container_name: ebird-cloudflare-tunnel
     restart: unless-stopped
-    # Use host network so the tunnel can reach the exposed 8501 port natively
-    network_mode: "host"
     command: tunnel --no-autoupdate run ebird-admin
     volumes:
       # Mount the cloudflared configuration and credentials from the Mac host
       - /Users/lhzn/.cloudflared:/etc/cloudflared
     depends_on:
-      - ebird-admin
+      - bird-admin

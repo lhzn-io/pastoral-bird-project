@@ -52,7 +52,7 @@ def generate_blog_post(bird_data, days_back=7, theme="field_journal"):
     """
     Uses the kanoa AnalyticsInterpreter to generate the entry.
     """
-    with open("prompts.json", "r") as f:
+    with open(os.path.join(os.path.dirname(__file__), "prompts.json"), "r") as f:
         prompts = json.load(f)
         
     theme_prompts = prompts.get(theme)
